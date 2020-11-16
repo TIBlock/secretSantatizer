@@ -1,10 +1,10 @@
-# secretSatatizer
+# Secret Satatizer
 
-The Secret Santatizer is a web app designed for the user to create a list of secret santa participants and email their Secret Santa match. 
+The Secret Santatizer is a Python web app designed for the user to create a list of Secret Santa participants and then email the participants their match. 
 
 ## Motivation
 
-This project came out of me wanting to have a Secret Santa with some friends. I thought it might be a fun side project that gives me an excuse to create a full stack python application. 
+This project came out of wanting to have a Secret Santa gift exchange with some friends. I thought it might be a fun side project that gives me an excuse to create a Python web application. 
 
 ## Features
 This is a list of features I would like to implement in this project:
