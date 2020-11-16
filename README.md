@@ -15,5 +15,12 @@ This is a list of features I would like to implement in this project:
 
 ## Potential Features
 This is a list of potential features to expand the web application:
-- User accounts/authentication to allow user's to save lists.
+- User accounts/authentication.
+  - Save lists for reference and future use. 
   - Edit past lists.
+  - Copy lists.
+  - Share lists with other users. 
+- Create a clickable link to allow people to input their information.
+  - Could allow list makers to send out to their own mailing list and only log user's who want to participate.
+  - Set a timer on the link so that it will expire after a certain period of time.
+  - Reminder notification sent to the user when a certain amount of time is left before the link expires. 
