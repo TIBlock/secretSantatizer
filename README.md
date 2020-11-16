@@ -8,8 +8,12 @@ This project came out of me wanting to have a Secret Santa with some friends. I 
 
 ## Features
 This is a list of features I would like to implement in this project:
-- Create list of participants for a Secret Santa gift exchange
-- Mark which of the participants is in a couple to prevent them from being matched (optional)
-- Mail out matches to each participant anonymously
+- Create list of participants for a Secret Santa gift exchange.
+- Mark which of the participants is in a couple to prevent them from being matched. (optional)
+- Mail out matches to each participant anonymously.
   - This app will also mail the list creator anonymously. That way even they do not know who they matched with in the dawing. 
-  
+
+## Potential Features
+This is a list of potential features to expand the web application:
+- User accounts/authentication to allow user's to save lists.
+  - Edit past lists.
