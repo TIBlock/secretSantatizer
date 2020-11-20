@@ -1,4 +1,4 @@
-# Secret Satatizer
+# Secret Santatizer
 
 The Secret Santatizer is a Python web app designed for the user to create a list of Secret Santa participants and then email the participants their match. 
 
