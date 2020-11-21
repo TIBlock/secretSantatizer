@@ -1,4 +1,4 @@
-from user import Users
+from users import Users
 users = [
     {'user': 'user1', 'user_id': 1, 'u_f_name': 'Taylor', 'u_l_name': 'Blocker', 'u_has_partner': True},
     {'user': 'user2', 'user_id': 2, 'u_f_name': 'Tay', 'u_l_name': 'Blocker', 'u_has_partner': True},

@@ -54,7 +54,7 @@ class Users():
     def next_thing(self, user):
         pass
 
-    def next_step():
+    def next_step(self):
         pass
 
 user1 = Users(1, 'Lee', 'Arnold', False)
