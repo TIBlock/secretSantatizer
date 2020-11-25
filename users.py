@@ -54,11 +54,11 @@ class Users():
     def next_thing(self, user):
         pass
 
-    def next_step():
+    def next_step(self):
         pass
 
-user1 = Users(1, 'Lee', 'Arnold', False)
-user2 = Users(2, 'Tait', 'Loughridge', True)
-print(user1,'\n',user2)
+# user1 = Users(1, 'Lee', 'Arnold', False)
+# user2 = Users(2, 'Tait', 'Loughridge', True)
+# print(user1,'\n',user2)
 
-print(user2.add_partner())
+# print(user2.add_partner())
