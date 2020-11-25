@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class=''>
+        <!-- {% if message %}
+        <p class='message'>{{ message | safe }}</p>
+        {% endif %} -->
+
+        <form action='/submit' method="POST">
+            <!-- first name, last name, has partner -->
+            <div class=''>
+                <div class=''>
+                    <label for="first_name">First Name</label>
+                    <input type="text" name='first_name' class='' id='first_name'>
+                </div>
+                <div class=''>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name='last_name' class='' id='last_name'>
+                </div>
+                <div class=''>
+                    <label for="email">Email</label>
+                    <input type="email" name='email' class='' id='email'>
+                </div>
+                <div class=''>
+                    <label for="partner_check">Partner?</label>
+                    <select name='partner_check' class='' id='partner_check'>
+                        <option selected>Choose...</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            
+             <!-- submit -->
+             <div class="">
+                <button type="submit" class="">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
