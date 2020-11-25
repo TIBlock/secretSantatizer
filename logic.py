@@ -39,21 +39,35 @@ def create_user():
 
         user_count += 1
 
-    return user_count
+    which_user = f"user{str(user_count)}"  
 
-# print(create_user())  
-print(users)
-print(' ')
+    def make_user(a_user):
+        a_user = Users(u_id, u_f_name, u_l_name, u_has_partner)
+        user_list1.append(a_user)
 
-for user in users:
-    user['user'] = Users(user['user_id'], user['u_f_name'], user['u_l_name'], user['u_has_partner'])
-    user_list1.append(user['user'])
+        return user_list1
 
-for l in user_list1:
-    print(l)
+    make_user(which_user)
 
-print(' ')
-print(users[0])
+    print(user_list1, user_count, which_user)
+    print(user_list1[0])
+
+
+create_user()  
+
+
+# print(users)
+# print(' ')
+
+# for user in users:
+#     user['user'] = Users(user['user_id'], user['u_f_name'], user['u_l_name'], user['u_has_partner'])
+#     user_list1.append(user['user'])
+
+# for l in user_list1:
+#     print(l)
+
+# print(' ')
+# print(users[0])
 # Add user to user_list and id to user_id_list
 
 # Check for and add partner if they have one
