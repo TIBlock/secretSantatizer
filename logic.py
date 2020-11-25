@@ -14,16 +14,31 @@ user_list1 = []
 def create_user():
     user_count = 0
 
-    u_id = int(input('Which user is this?: '))
-    u_f_name = input("What is the user's first name?: ")
-    u_l_name = input("What is the user's last name?: ")
-    u_has_partner = input("Does the user have a partner: Y or N")
-    if u_has_partner.lower() == 'y':
-        u_has_partner = True
-    else:
-        u_has_partner = False
+    if user_count == 0:
+        print("Please input your first user")
+        u_id = 1
+        u_f_name = input("What is the user's first name?: ")
+        u_l_name = input("What is the user's last name?: ")
+        u_has_partner = input("Does the user have a partner? Y or N: ")
+        if u_has_partner.lower() == 'y':
+            u_has_partner = True
+        else:
+            u_has_partner = False
 
-    user_count += 1
+        user_count += 1
+    else:
+        print("Please input your next user")
+        u_id = int(input('Which user is this?: '))
+        u_f_name = input("What is the user's first name?: ")
+        u_l_name = input("What is the user's last name?: ")
+        u_has_partner = input("Does the user have a partner? Y or N: ")
+        if u_has_partner.lower() == 'y':
+            u_has_partner = True
+        else:
+            u_has_partner = False
+
+        user_count += 1
+
     return user_count
 
 # print(create_user())  
