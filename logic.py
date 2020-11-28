@@ -1,4 +1,5 @@
 from users import Users
+
 users = [
     {'user': 'user1', 'user_id': 1, 'u_f_name': 'Taylor', 'u_l_name': 'Blocker', 'u_has_partner': True},
     {'user': 'user2', 'user_id': 2, 'u_f_name': 'Tay', 'u_l_name': 'Blocker', 'u_has_partner': True},
@@ -12,7 +13,7 @@ user_list1 = []
 # Create user
 
 def create_user():
-    user_count = 0
+    user_count = len(user_list1)
 
     if user_count == 0:
         print("Please input your first user")
@@ -25,7 +26,7 @@ def create_user():
         else:
             u_has_partner = False
 
-        user_count += 1
+        
     else:
         print("Please input your next user")
         u_id = int(input('Which user is this?: '))
@@ -37,9 +38,7 @@ def create_user():
         else:
             u_has_partner = False
 
-        user_count += 1
-
-    which_user = f"user{str(user_count)}"  
+    which_user = f"user{str(u_id)}"  
 
     def make_user(a_user):
         a_user = Users(u_id, u_f_name, u_l_name, u_has_partner)
@@ -49,11 +48,11 @@ def create_user():
 
     make_user(which_user)
 
-    print(user_list1, user_count, which_user)
-    print(user_list1[0])
+#     print(user_list1, user_count, which_user)
+#     print(user_list1[0])
 
 
-create_user()  
+# create_user()  
 
 
 # print(users)

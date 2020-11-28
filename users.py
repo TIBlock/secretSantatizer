@@ -8,11 +8,12 @@ class Users():
         self.has_partner = has_partner
         self.partner_id = None
         self.pair_list = []
+        self.email = ''
 
     # The str function below will take the class object of Users and 
     # make it print the info we want for the list
     def __str__(self):
-        return f"{self.f_name} {self.l_name} is user {self.id} and can be matched with users {self.pair_list}"
+        return f"{self.f_name} {self.l_name} is user {self.id}. Their email is {self.email} and they can be matched with users {self.pair_list}"
 
     # Used to connect users if they are partners
     # TO DO: Add logic to change status for partner since it will not be automatically set
@@ -28,8 +29,8 @@ class Users():
         return f"User's partner is now {self.partner_id}"
 
     # This function will populate the user's pair_list with all the ids of the users created  
-    def build_user_list(self):
-        pass
+    def build_user_list(self, user_list):
+        self.pair_list.append(user_list)
         
     # This function will check if the person has a partner and
     # move them out of the potential pair list
