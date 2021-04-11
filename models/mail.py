@@ -1,9 +1,4 @@
-from flask import Flask
-from flask_mail import Mail, Message
-
-
-app = Flask(__name__)
-
+## TODO: See what can be kept in this to make the mail system function
 
 # Not all of the following are required from what I'm seeing
 app.config['DEBUG'] = True # This is linked to MAIL_DEBUG - they must match
@@ -31,7 +26,3 @@ def index():
     msg.body = "Hello Flask message sent from Flask-Mail"
     mail.send(msg)
     return f'Sent'
-
-
-if __name__ == '__main__':
-    app.run(port=5000)
