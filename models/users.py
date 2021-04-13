@@ -1,3 +1,4 @@
+# some of this is usable and should be modified to work in the new format
 import random
 
 class Users():
