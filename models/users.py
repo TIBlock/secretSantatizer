@@ -1,7 +1,7 @@
 # some of this is usable and should be modified to work in the new format
 import random
 
-class Users():
+class UserModel():
     def __init__(self, id, f_name, l_name, has_partner):
         self.id = id
         self.f_name = f_name
