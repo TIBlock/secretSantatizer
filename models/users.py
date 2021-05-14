@@ -58,9 +58,7 @@ class UserModel(db.Model):
 
     # The str function below will take the class object of Users and 
     # make it print the info we want for the list
-    def __str__(self):
-        return f"{self.f_name} {self.l_name} is user {self.id}. Their email is {self.email} and they can be matched with users {self.pair_list}"
-
+ 
     # Used to connect users if they are partners
     # TO DO: Add logic to change status for partner since it will not be automatically set
     def add_partner(self):
