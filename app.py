@@ -3,7 +3,7 @@ from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from blocklist import BLOCKLIST
 
-from resources.users import UserRegister, User
+from resources.users import UserRegister, User, UserLogin, UserLogout, TokenRefresh
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -70,6 +70,10 @@ def revoked_token_callback(self, error):
 
 api.add_resource(UserRegister, '/register')
 api.add_resource(User, '/user/<user_id>')
+api.add_resource(UserLogin, '/login')
+api.add_resource(UserLogout, '/logout')
+api.add_resource(TokenRefresh, '/refresh')
+
 
 if __name__ == '__main__':
     from db import db

@@ -48,7 +48,7 @@ class UserModel(db.Model):
 
     # Used to connect users if they are partners
     # TO DO: Add logic to change status for partner since it will not be automatically set
-    def add_partner(self):
+    def add_participant(self):
         partner_change = input('Does this user have a partner?: ')
         # Add an error handling check here 
         if partner_change.lower() == 'y':
