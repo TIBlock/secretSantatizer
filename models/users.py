@@ -1,15 +1,60 @@
 # some of this is usable and should be modified to work in the new format
-import random
+from db import db
 
-class UserModel():
-    def __init__(self, id, f_name, l_name, has_partner):
-        self.id = id
+class UserModel(db.Model):
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    f_name = db.Column(db.String(80))
+    l_name = db.Column(db.String(80))
+    has_partner = db.Column(db.Boolean)
+    partner_id = db.Column(db.Integer)
+    pair_list = db.Column(db.String(80))
+    email = db.Column(db.String(80))
+    password = db.Column(db.String(80))
+
+    def __init__(self, 
+                f_name, 
+                l_name, 
+                # has_partner, 
+                # pair_list, 
+                email, 
+                password):
         self.f_name = f_name
         self.l_name = l_name
-        self.has_partner = has_partner
-        self.partner_id = None
-        self.pair_list = []
-        self.email = ''
+        # self.has_partner = has_partner
+        # self.partner_id = None
+        # self.pair_list = pair_list
+        self.email = email
+        self.password = password
+
+    def save_to_db(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete_from_db(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def json(self):
+        return {
+            'id': self.id,
+            'f_name': self.f_name,
+            'l_name': self.l_name,
+            'has_partner': self.has_partner,
+            'partner_id': None,
+            'pair_list': self.pair_list,
+            'email': self.email,
+            'password': self.password
+        }
+
+    @classmethod
+    def find_by_email(cls, email):
+        return cls.query.filter_by(email=email).first()
+
+    @classmethod
+    def find_by_id(cls, _id):
+        return cls.query.filter_by(id=_id).first()
 
     # The str function below will take the class object of Users and 
     # make it print the info we want for the list
