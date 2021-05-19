@@ -7,24 +7,13 @@ class UserModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     f_name = db.Column(db.String(80))
     l_name = db.Column(db.String(80))
-    has_partner = db.Column(db.Boolean)
-    partner_id = db.Column(db.Integer)
-    pair_list = db.Column(db.String(80))
     email = db.Column(db.String(80))
     password = db.Column(db.String(80))
+    is_admin = db.Column(db.Boolean)
 
-    def __init__(self, 
-                f_name, 
-                l_name, 
-                # has_partner, 
-                # pair_list, 
-                email, 
-                password):
+    def __init__(self, f_name, l_name, email, password):
         self.f_name = f_name
         self.l_name = l_name
-        # self.has_partner = has_partner
-        # self.partner_id = None
-        # self.pair_list = pair_list
         self.email = email
         self.password = password
 
@@ -41,11 +30,9 @@ class UserModel(db.Model):
             'id': self.id,
             'f_name': self.f_name,
             'l_name': self.l_name,
-            'has_partner': self.has_partner,
-            'partner_id': None,
-            'pair_list': self.pair_list,
             'email': self.email,
-            'password': self.password
+            'password': self.password,
+            'is_admin': self.is_admin
         }
 
     @classmethod
@@ -58,7 +45,7 @@ class UserModel(db.Model):
 
     # The str function below will take the class object of Users and 
     # make it print the info we want for the list
- 
+
     # Used to connect users if they are partners
     # TO DO: Add logic to change status for partner since it will not be automatically set
     def add_partner(self):
