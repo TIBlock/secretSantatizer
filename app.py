@@ -40,14 +40,14 @@ def expired_token_callback(self, error):
 @jwt.invalid_token_loader
 def invalid_token_callback(error):
     return jsonify({
-        'desription': 'Signature verification failed.',
+        'description': 'Signature verification failed.',
         'error': 'invalid_token'
     }), 401
 
 @jwt.unauthorized_loader
 def missing_token_callback(self, error):
     return jsonify({
-        'desription': 'Request does not contain an access token.',
+        'description': 'Request does not contain an access token.',
         'error': 'authorization_required'
     }), 401
 
@@ -55,7 +55,7 @@ def missing_token_callback(self, error):
 @jwt.needs_fresh_token_loader
 def token_not_fresh_callback(self, error):
     return jsonify({
-        'desription': 'The token is not fresh.',
+        'description': 'The token is not fresh.',
         'error': 'fresh_token_required'
     }), 401
 
@@ -63,7 +63,7 @@ def token_not_fresh_callback(self, error):
 @jwt.revoked_token_loader
 def revoked_token_callback(self, error):
     return jsonify({
-        'desription': 'The token has been revoked.',
+        'description': 'The token has been revoked.',
         'error': 'token_revoked'
     }), 401
 
